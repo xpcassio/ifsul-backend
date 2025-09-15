@@ -1,7 +1,6 @@
 # Projeto Exemplo
 
-Uma pequena descrição do projeto.  
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+Projeto para a disciplina de backend.
 
 ---
 
