@@ -5,13 +5,13 @@ services:
     container_name: catalogo_db
     image: postgres:15-alpine
     environment:
-      POSTGRES_USER: admin
-      POSTGRES_PASSWORD: senha123
-      POSTGRES_DB: catalogo_produtos
+      POSTGRES_USER: ${DATABASE_USER}
+      POSTGRES_PASSWORD: ${DATABASE_KEY}
+      POSTGRES_DB: ${DATABASE_NAME}
     volumes:
       - catalogo_data:/var/lib/postgresql/data
     ports:
-      - "5432:5432"
+      - "${DATABASE_PORT}:5432"
 
 volumes:
   catalogo_data:
