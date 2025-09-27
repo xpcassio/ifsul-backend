@@ -1,0 +1,217 @@
+type: collection.insomnia.rest/5.0
+name: Scratch Pad
+meta:
+  id: wrk_scratchpad
+  created: 1757443705840
+  modified: 1757443705840
+  description: ""
+collection:
+  - name: IFsul
+    meta:
+      id: fld_c7887064494d4263960cc837d0f86e31
+      created: 1757444389848
+      modified: 1757444389848
+      sortKey: -1757444389848
+      description: ""
+    children:
+      - url: "{{ _.url }}/products"
+        name: /products
+        meta:
+          id: req_c437dbc297a64ea19216e1294132149e
+          created: 1757443761213
+          modified: 1758915154246
+          isPrivate: false
+          description: |-
+            - GET /products  
+              - 200: Lista de produtos (array de objetos Product)  
+              - 500: { message: "Erro ao listar produtos." }
+          sortKey: -1757444393663
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.5.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.url }}/products/2"
+        name: /products/:id
+        meta:
+          id: req_354ab7cba2ea4e508916858cea76deeb
+          created: 1757938485571
+          modified: 1758915251796
+          isPrivate: false
+          description: |-
+            - GET /products/:id  
+              - 200: Produto encontrado (objeto Product)  
+              - 400: { message: "ID inválido." }  
+              - 404: { message: "Produto não encontrado." }  
+              - 500: { message: "Erro ao buscar produto." }
+          sortKey: -1757444393613
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.5.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.url }}/"
+        name: /
+        meta:
+          id: req_3e12a76790f447b2811b0efcd5d0bb87
+          created: 1757938499914
+          modified: 1757938504949
+          isPrivate: false
+          description: ""
+          sortKey: -1757444393763
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.5.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.url }}/products/13"
+        name: /products/:id
+        meta:
+          id: req_8c0bf4a360bb4090b0c86821653420fa
+          created: 1757938703728
+          modified: 1758915556940
+          isPrivate: false
+          description: |-
+            - DELETE /products/:id  
+              - 204: Sem conteúdo — produto removido com sucesso  
+              - 400: { message: "ID inválido." }  
+              - 404: { message: "Produto não encontrado." }
+              - 500: { message: "Erro ao deletar produto." }
+          sortKey: -1757444393563
+        method: DELETE
+        headers:
+          - name: User-Agent
+            value: insomnia/11.5.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.url }}/products"
+        name: /products
+        meta:
+          id: req_540438a573ef4ce7baf6e855cb512b3c
+          created: 1758913424922
+          modified: 1758915185677
+          isPrivate: false
+          description: |-
+            - POST /products  
+              - 201: Produto criado (objeto Product)  
+              - 400: validação inválida, exemplo:  
+                - { message: "Nome é obrigatório e deve ser string." }  
+                - { message: "Preço é obrigatório e deve ser número." }  
+              - 500: { message: "Erro ao criar produto." }
+          sortKey: -1757444393588
+        method: POST
+        body:
+          mimeType: application/json
+          text: >-
+            {
+
+            "title": "Fone Bluetooth X200",
+
+            "description": "Fone sem fio com cancelamento de ruído, até 30h de
+            bateria e carregamento rápido.",
+
+            "price": 399.0,
+
+            "imageUrl": "https://example.com/images/fone-x200.png",
+
+            "isFeatured": false
+
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.5.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.url }}/products/13"
+        name: /products/:id
+        meta:
+          id: req_73fb539487f04746a72ecea6cf895275
+          created: 1758914128200
+          modified: 1758915550047
+          isPrivate: false
+          description: >-
+            - PUT /products/:id  
+              - 200: Produto atualizado (objeto Product)  
+              - 400: { message: "ID inválido." } ou validação dos campos (ex.: "Preço deve ser número.")  
+              - 404: { message: "Produto não encontrado." }  
+              - 500: { message: "Erro ao atualizar produto." }
+          sortKey: -1757444393575.5
+        method: PUT
+        body:
+          mimeType: application/json
+          text: >-
+            {
+
+            "title": "Mochila Adventure 30L",
+
+            "description": "Mochila resistente à água, múltiplos compartimentos
+            e alças ergonômicas para trilhas e viagens.",
+
+            "price": 179.5,
+
+            "imageUrl": "https://example.com/images/mochila-30l.jpg"
+
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.5.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_99d30891da4bdcebc63947a8fc17f076de878684
+    created: 1757443721103
+    modified: 1757443721103
+environments:
+  name: Base Environment
+  meta:
+    id: env_99d30891da4bdcebc63947a8fc17f076de878684
+    created: 1757443721102
+    modified: 1758912254235
+    isPrivate: false
+  data:
+    url: localhost:3001
